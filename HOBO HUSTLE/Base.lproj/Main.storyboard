@@ -12,7 +12,6 @@
         <!--HOBO HUSTLE-->
         <scene sceneID="dlR-Oz-coQ">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kZ7-f6-L1U" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="qjl-MT-aLj" customClass="TodoListViewController" customModule="HOBO_HUSTLE" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="znf-rI-CQl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -33,8 +32,16 @@
                             <outlet property="delegate" destination="qjl-MT-aLj" id="cYW-jp-Pdd"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="HOBO HUSTLE" id="Qkh-z8-SgE"/>
+                    <navigationItem key="navigationItem" title="HOBO HUSTLE" id="Qkh-z8-SgE">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="3U6-vw-nFf">
+                            <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="addButtonPressed:" destination="qjl-MT-aLj" id="vZ3-49-ssA"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kZ7-f6-L1U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="296.80000000000001" y="84.107946026986511"/>
         </scene>
@@ -46,7 +53,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uho-SB-LOO">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.30840110780000002" green="0.5618229508" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
