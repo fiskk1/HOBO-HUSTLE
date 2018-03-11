@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--HOBO HUSTLE-->
+        <!--ITEMS-->
         <scene sceneID="dlR-Oz-coQ">
             <objects>
                 <tableViewController id="qjl-MT-aLj" customClass="TodoListViewController" customModule="HOBO_HUSTLE" customModuleProvider="target" sceneMemberID="viewController">
@@ -40,7 +40,7 @@
                             <outlet property="delegate" destination="qjl-MT-aLj" id="cYW-jp-Pdd"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="HOBO HUSTLE" id="Qkh-z8-SgE">
+                    <navigationItem key="navigationItem" title="ITEMS" id="Qkh-z8-SgE">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="3U6-vw-nFf">
                             <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
@@ -51,7 +51,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kZ7-f6-L1U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="296.80000000000001" y="84.107946026986511"/>
+            <point key="canvasLocation" x="1002" y="83"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="eiy-8A-RnK">
@@ -71,12 +71,51 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="qjl-MT-aLj" kind="relationship" relationship="rootViewController" id="ccL-pD-8Db"/>
+                        <segue destination="TSB-Bj-yK9" kind="relationship" relationship="rootViewController" id="Wf9-cv-9Y2"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9yE-Tf-1oa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-409" y="84"/>
+        </scene>
+        <!--HOBO HUSTLE-->
+        <scene sceneID="K5y-pY-esm">
+            <objects>
+                <tableViewController id="TSB-Bj-yK9" customClass="CategoryViewController" customModule="HOBO_HUSTLE" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="0j1-cc-yjI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCell" id="cfS-uj-5MI">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cfS-uj-5MI" id="C6c-gE-Bot">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="TSB-Bj-yK9" id="WQD-7N-ih6"/>
+                            <outlet property="delegate" destination="TSB-Bj-yK9" id="0aj-Xa-z3D"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="HOBO HUSTLE" id="59D-3N-Bkb">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="2iR-qT-3WK">
+                            <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="addButtonPressed:" destination="TSB-Bj-yK9" id="CGF-Ea-PFo"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="qjl-MT-aLj" kind="show" identifier="goToItems" id="IYk-AI-Hdq"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bgp-Tv-5Od" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="319" y="82"/>
         </scene>
     </scenes>
 </document>
