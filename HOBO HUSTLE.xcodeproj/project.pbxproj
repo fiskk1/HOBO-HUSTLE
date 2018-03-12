@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F204C2B6B038AC745000021 /* Pods_HOBO_HUSTLE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B8C88C1CE5DE9A325B5EC1C /* Pods_HOBO_HUSTLE.framework */; };
 		15507C192048DD070062789F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15507C182048DD070062789F /* AppDelegate.swift */; };
 		15507C1B2048DD070062789F /* TodoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15507C1A2048DD070062789F /* TodoListViewController.swift */; };
 		15507C1E2048DD070062789F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15507C1C2048DD070062789F /* Main.storyboard */; };
@@ -26,6 +27,9 @@
 		15507C242048DD070062789F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15507C5220521D3B0062789F /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		15507C542054151D0062789F /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		4BE53B834B1026BF369C6ED6 /* Pods-HOBO HUSTLE.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HOBO HUSTLE.release.xcconfig"; path = "Pods/Target Support Files/Pods-HOBO HUSTLE/Pods-HOBO HUSTLE.release.xcconfig"; sourceTree = "<group>"; };
+		8EA7A522ED2192E668B0BD56 /* Pods-HOBO HUSTLE.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HOBO HUSTLE.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HOBO HUSTLE/Pods-HOBO HUSTLE.debug.xcconfig"; sourceTree = "<group>"; };
+		9B8C88C1CE5DE9A325B5EC1C /* Pods_HOBO_HUSTLE.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HOBO_HUSTLE.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F204C2B6B038AC745000021 /* Pods_HOBO_HUSTLE.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +49,8 @@
 			children = (
 				15507C172048DD070062789F /* HOBO HUSTLE */,
 				15507C162048DD070062789F /* Products */,
+				BDDCA7CD7B602A1C6223ED79 /* Pods */,
+				5B55376455306381EB2452A3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,6 +109,23 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		5B55376455306381EB2452A3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9B8C88C1CE5DE9A325B5EC1C /* Pods_HOBO_HUSTLE.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BDDCA7CD7B602A1C6223ED79 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8EA7A522ED2192E668B0BD56 /* Pods-HOBO HUSTLE.debug.xcconfig */,
+				4BE53B834B1026BF369C6ED6 /* Pods-HOBO HUSTLE.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -109,9 +133,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 15507C272048DD070062789F /* Build configuration list for PBXNativeTarget "HOBO HUSTLE" */;
 			buildPhases = (
+				44F6382BD7A2B0F3835AB066 /* [CP] Check Pods Manifest.lock */,
 				15507C112048DD070062789F /* Sources */,
 				15507C122048DD070062789F /* Frameworks */,
 				15507C132048DD070062789F /* Resources */,
+				DE6B297ED141434A7C66DE24 /* [CP] Embed Pods Frameworks */,
+				EC2E79A05887B4E91709BD87 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -168,6 +195,62 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		44F6382BD7A2B0F3835AB066 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HOBO HUSTLE-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE6B297ED141434A7C66DE24 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HOBO HUSTLE/Pods-HOBO HUSTLE-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HOBO HUSTLE/Pods-HOBO HUSTLE-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC2E79A05887B4E91709BD87 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HOBO HUSTLE/Pods-HOBO HUSTLE-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		15507C112048DD070062789F /* Sources */ = {
@@ -312,6 +395,7 @@
 		};
 		15507C282048DD070062789F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8EA7A522ED2192E668B0BD56 /* Pods-HOBO HUSTLE.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -327,6 +411,7 @@
 		};
 		15507C292048DD070062789F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4BE53B834B1026BF369C6ED6 /* Pods-HOBO HUSTLE.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
